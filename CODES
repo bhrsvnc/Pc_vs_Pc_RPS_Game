@@ -1,0 +1,64 @@
+import random
+import time
+B1Puan=0
+B2Puan =0
+while True:
+    bilgisayar1 = random.randint(1, 3)   
+    if bilgisayar1 == 1:
+        bilgisayar1 = 'taş'
+    elif bilgisayar1 == 2:
+        bilgisayar1 = 'kağıt'
+    else:
+        bilgisayar1 = 'makas'
+
+    print('Taş, Kağıt, Makas')
+    time.sleep(1)
+    print('1')
+    time.sleep(1)
+    print('2')
+    time.sleep(1)
+    print('3')
+    time.sleep(1)
+    print('B1in seçimi:', bilgisayar1)
+
+    if bilgisayar1 == 'taş' or bilgisayar1 == 'makas' or bilgisayar1 == 'kağıt':
+
+        bilgisayar2 = random.randint(1, 3)
+        if bilgisayar2 == 1:
+            bilgisayar2 = 'taş'
+        elif bilgisayar2 == 2:
+            bilgisayar2 = 'kağıt'
+        else:
+            bilgisayar2 = 'makas'
+
+        print('Taş, Kağıt, Makas')
+        time.sleep(1)
+        print('1')
+        time.sleep(1)
+        print('2')
+        time.sleep(1)
+        print('3')
+        time.sleep(1)
+        print('B2nin seçimi:', bilgisayar2)
+        if bilgisayar2 == bilgisayar1:
+            print('Beraberlik')
+            print('Şu anki puan durumu: Bilgisayar1:',B1Puan, ', Bilgisayar2:', B2Puan)
+        elif bilgisayar1 == 'taş' and bilgisayar2 == 'makas':
+            print('B1 kazandı')
+            B1Puan = B1Puan + 1
+            print('Şu anki puan durumu: Bilgisayar1:',B1Puan, ', Bilgisayar2:', B2Puan)
+        elif bilgisayar1 == 'kağıt' and bilgisayar2 == 'taş':
+            print('B1 kazandı')
+            B1Puan = B1Puan + 1
+            print('Şu anki puan durumu: Bilgisayar1:',B1Puan, ', Bilgisayar2:', B2Puan)
+        elif bilgisayar1 == 'makas' and bilgisayar2 == 'kağıt':
+            print('B1 kazandı')
+            B1Puan = B1Puan + 1
+            print('Şu anki puan durumu: Bilgisayar1:',B1Puan, ', Bilgisayar2:', B2Puan)
+        else:
+            print('B2 kazandı')
+            B2Puan = B2Puan + 1
+            print('Şu anki puan durumu: Bilgisayar1:',B1Puan, ', Bilgisayar2:', B2Puan)
+    else:
+        print("Kodlarda bir problem var.")
+
